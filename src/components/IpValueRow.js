@@ -1,7 +1,8 @@
 import React from 'react';
 
 const IpValueRow = ({ data }) => {
-  const { client, datetime, count } = data;
+  const { client, datetime: dateString, count } = data;
+  const datetime = new Date(dateString);
   const [ hours, minutes, seconds ] = [ datetime.getHours(), datetime.getMinutes(), datetime.getSeconds() ];
   const month = datetime.getMonth();
   const date = datetime.getDate();
