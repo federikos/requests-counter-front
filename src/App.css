@@ -55,8 +55,10 @@ tfoot {
   color: #fff;
   font: normal normal 500 14px/24px Montserrat;
   font-size: 16px;
+  border-width: 0;
 }
 
 .resetButton:hover {
   background: #352640 0% 0% no-repeat padding-box;
+  cursor: pointer;
 }
