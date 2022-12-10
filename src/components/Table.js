@@ -1,7 +1,7 @@
 import React from 'react';
 import TableHead from './TableHead';
 import RequestsRow from './RequestsRow';
-import IpValueRow from './IpValueRow';
+import IpDataRows from './IpDataRows';
 
 const Table = ({ requestsData, resetClick }) => {
   return (
@@ -14,19 +14,7 @@ const Table = ({ requestsData, resetClick }) => {
               const ipValue = requestsData[ip];
 
               return (
-                <>
-                  <tr key={ip}>
-                    <td>{ip}</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                    {
-                      ipValue.map((ipValueRow) => {
-                        return <IpValueRow data={ipValueRow} />
-                      })
-                    }
-                </>
+                <IpDataRows ip={ip} ipValue={ipValue} />
               )
             })
           }
